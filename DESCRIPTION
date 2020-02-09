@@ -1,0 +1,13 @@
+Package: mctools
+Type: Package
+Title: A set of tools for Markov Chain analysis and rendering
+Version: 0.1.0
+Authors@R: person(given = "Fabio", family = "Caironi", email = "fabio130497@gmail.com", role = c("aut", "cre"))
+Description: This package provides a user-friendly shiny app for Markov Chains analysis and rendering.
+    It features MC manual and file (see details) input and several outputs, including a graph and a simulation sections.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.6.2), markovchain
+Imports: shiny, shinyMatrix, shinyalert, shinyjs, diagram, parallel, rlang, RColorBrewer
+RoxygenNote: 7.0.2
