@@ -30,7 +30,8 @@ matrixBuilder <- function(T) {
 
   m <- nrow(T)
   n <- ncol(T)
-  T <- rbind(T, c(rep(0, length.out = (n-1)) , 1) )
+  if("Withdrawals" %in% nam)
+    T <- rbind(T, c(rep(0, length.out = (n-1)) , 1) )
 
   # Adjusts inexact sum due to approximation.
   # Takes deviations from 1 and equally distributes them to

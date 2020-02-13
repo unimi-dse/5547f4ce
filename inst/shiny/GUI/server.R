@@ -1,5 +1,6 @@
 # 09.02.20 Formattare meglio la pagina di summary e inserire link con linguaggio HTML
 #' Defines the server logic
+#' @import markovchain
 server <- function(input, output, session) {
 
   '%then%' <- shiny:::'%OR%'
@@ -171,6 +172,15 @@ server <- function(input, output, session) {
   })
 
   ## All renderings/tools (depending on 'mc') ##
+  # Function for generating diagram boxes' colors
+  color_genr <- function(n)
+  {
+    qual_col_pals = RColorBrewer::brewer.pal.info[RColorBrewer::brewer.pal.info$category == 'qual',]
+    col_vector = unlist(mapply(RColorBrewer::brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
+
+    col_vector[c(1:n)]
+  }
+
   shiny::observe({
     # Markov Chain dynamically assigned
     if(!(is.null(v$s) || is.null(v$tm) || is.null(v$n))) {
@@ -239,7 +249,7 @@ server <- function(input, output, session) {
       # GRAPH OUTPUT #
       output$graph <- shiny::renderPlot({
         diagram::plotmat(A=t(mc[,]), name = markovchain::states(mc),
-                         box.col = mctools::color_genr(dim(mc)),
+                         box.col = color_genr(dim(mc)),
                          self.lwd = 2, arr.pos = 0.6, txt.font = 15,
                          box.cex = 1.2, cex.txt = 1.2, shadow.size = 0.008,
                          arr.type = "simple", relsize = 0.6, dtext = 0.5,

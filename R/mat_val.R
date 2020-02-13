@@ -16,7 +16,6 @@
 #' mat_val(matrixBuilder(A))
 #'
 #' @export
-# Transition matrix validation function
 mat_val <- function(M) {
   if(is.null(M) || !as.logical(prod(!is.na(M))) || length(which(M<0)) > 0 ) {
     "Invalid transition matrix"

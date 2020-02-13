@@ -4,11 +4,18 @@
 \alias{percToNum}
 \title{Percentage to numeric}
 \usage{
-percToNum(x)
+percToNum(Y)
+}
+\arguments{
+\item{Y}{A vector or matrix of strings that contains characters interpreted as numbers, except \code{\%}.}
 }
 \value{
 The numeric vector or matrix resulting. \code{dimnames} is left unchanged.
 }
 \description{
 Turns a character vector or matrix of percentages into numeric (dividing by 100).
+}
+\examples{
+percToNum(c("2.13\%", "5\%", "-12.12\%", "4\%", "1.2\%"))
+
 }

@@ -47,8 +47,8 @@ ESMAtransRateReader <- function(filepath) {
   # Builds transition matrix
   tab <- read.csv(textConnection(lin))
   mat <- as.matrix(tab)
-  mat <- percToNum(mat)
-  mat <- matrixBuilder(mat)
+  mat <- mctools::percToNum(mat)
+  mat <- mctools::matrixBuilder(mat)
 
   return(list("title" = title,"mat" = mat))
 }
