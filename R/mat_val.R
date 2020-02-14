@@ -18,10 +18,10 @@
 #' @export
 mat_val <- function(M) {
   if(is.null(M) || !as.logical(prod(!is.na(M))) || length(which(M<0)) > 0 ) {
-    "Invalid transition matrix"
+    return("Invalid transition matrix")
   } else if(!as.logical(prod(base::rowSums(M) == 1))) {
-    "Each row of the transition matrix must add up to 1"
+    return("Each row of the transition matrix must add up to 1")
   } else {
-    M
+    return(M)
   }
 }
