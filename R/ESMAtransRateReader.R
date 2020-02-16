@@ -16,8 +16,8 @@
 #' \dontrun{
 #'   ESMAtransRateReader("cerep878219543695070733.csv")
 #'   ESMAtransRateReader(system.file(
-#'                        'extdata', "cerepJCRA.csv"),
-#'                        package = 'mctools')
+#'                        'extdata', "cerepJCRA.csv",
+#'                        package = 'mctools'))
 #' }
 #'
 #' @importFrom utils read.csv

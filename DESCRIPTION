@@ -8,6 +8,6 @@ Description: This package provides a user-friendly shiny app for Markov Chains a
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 3.6.2), markovchain
+Depends: R (>= 3.6.0), markovchain
 Imports: shiny, shinyMatrix, shinyalert, shinyjs, diagram, parallel, rlang, RColorBrewer
 RoxygenNote: 7.0.2

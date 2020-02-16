@@ -14,7 +14,7 @@ The adjusted transition matrix
 }
 \description{
 Adjusts an inexact transition matrix, which may have zero-rows and zero-columns and/or may
-showcase sums of rows that slightly different from 1. This two aspects may
+showcase sums of rows that slightly differ from 1. This two aspects may
 occur as a result of parsing a transition rate matrix as given by ESMA website (see
 \code{\link{ESMAtransRateReader}}), where certain credit ratings are never experienced
 and decimal representation of fractions leads to approximation errors.

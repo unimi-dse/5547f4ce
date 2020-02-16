@@ -31,7 +31,23 @@ In this section you can find a complete analysis of your MC. This will include a
 ### Simulation
 Thanks to a built-in function for MC's simulation provided by `markovchain`, this section allows you to simulate your MC by picking and initial state and a sample dimension.
 
+### Functions
+The package contains several functions for data acquisition, parsing and text printing. You can check their usage in the documentation:
+```R
+? percToNum
+? matrixBuilder
+? mat_val
+? mat_gen
+? ESMAtransRateReader
+? printRows
+? printVecNames
+```
+
 
 ### External references
 To have an in-depth review of the package `markovchain` and its applications you may find very useful its vignette [An introduction to markovchain package](https://cran.r-project.org/web/packages/markovchain/vignettes/an_introduction_to_markovchain_package.pdf).
+
+
+### Authors
+**Fabio Caironi** - MCs student of Data Science and Economics @ [Unimi](https://www.unimi.it/en). Github: https://github.com/fabio130497
 

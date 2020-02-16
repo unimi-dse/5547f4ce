@@ -25,8 +25,8 @@ of statistics, the cardinal matrix of transitions and the transition rate matrix
 \dontrun{
   ESMAtransRateReader("cerep878219543695070733.csv")
   ESMAtransRateReader(system.file(
-                       'extdata', "cerepJCRA.csv"),
-                       package = 'mctools')
+                       'extdata', "cerepJCRA.csv",
+                       package = 'mctools'))
 }
 
 }
